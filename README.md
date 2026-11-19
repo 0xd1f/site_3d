@@ -1,28 +1,30 @@
 # Forma — Estúdio 3D
 
-Aplicação de modelagem 3D pessoal que roda no navegador. Para usar, abra `index.html` em um servidor estático. As bibliotecas são carregadas por CDN, então é necessária uma conexão com a internet.
+Editor 3D pessoal no navegador, feito com Three.js e Vite.
 
-## Recursos
+## Rodar localmente
 
-- Cubo, esfera, cilindro, cone, toro e plano
-- Seleção por clique, hierarquia da cena, duplicação e exclusão
-- Transformações de mover, girar e escalar com gizmo
-- Ajuste de posição, rotação, escala, cor, metallic e roughness
-- Aplicação de imagens PNG, JPEG e WebP como textura
-- Importação de modelos OBJ
-- Exportação de `.obj`, `.mtl` e imagens de textura reunidos em um ZIP
-- Salvar e reabrir projetos em `.forma.json`
+1. Instale Node.js 20 ou superior.
+2. Na pasta do projeto, rode `npm install`.
+3. Rode `npm run dev` e abra o endereço local mostrado no terminal.
+4. Para gerar os arquivos de publicação, rode `npm run build`.
 
-## Controles
+## O que dá para fazer
 
-- Arraste no fundo: orbitar a câmera
-- Roda do mouse: zoom
-- Clique no modelo: selecionar
+- Criar cubo, esfera, cilindro, cone, toro e plano
+- Importar arquivos `.obj` e selecionar os objetos na cena
+- Mover, girar e escalar pelo gizmo ou editando os valores
+- Ajustar cor, metalness, roughness e textura de imagem (PNG, JPG, WebP)
+- Duplicar, excluir e renomear objetos
+- Salvar e abrir projetos `.forma.json`
+- Exportar geometria em OBJ, com material MTL e textura empacotados em ZIP
+
+## Atalhos
+
 - `W`, `E`, `R`: mover, girar, escalar
-- `Ctrl+D`: duplicar
-- `Delete`: excluir
+- `Ctrl+D`: duplicar seleção
+- `Delete`: remover seleção
+- Arraste no espaço vazio para orbitar; use a roda para zoom
 
-## Exportação e texturas
-
-O botão **Exportar OBJ** baixa `forma-modelo.zip`, com `cena.obj`, `cena.mtl` e as imagens associadas. Extraia os arquivos juntos para manter os caminhos de textura do material. Os modelos OBJ importados são adicionados à cena como objetos editáveis.
+As texturas enviadas são incorporadas no modelo exportado. Ao abrir no Blender ou outro programa, mantenha o `.obj`, o `.mtl` e a imagem no mesmo local (ou extraia o ZIP inteiro).
 
